@@ -6,6 +6,13 @@ class Solution:
         #Your code here
         for i in range(1,n+1):
             print(i, end = " ")
+            
+        # if N == 0:
+        #     return
+        # else:
+            
+        #     self.printNos(N-1)
+        #     print(N, end = " ")
 
 
 #{ 
