@@ -11,20 +11,17 @@ class Solution:
         pass
         
     #Function to sort the list using insertion sort algorithm.    
-    def insertionSort(self, alist):
+    def insertionSort(self, arr):
         #code here
-       
-        for i in range(1,len(alist)):
-            key = alist[i]
+        for i in range(1,len(arr)):
             j = i - 1
-            while j >= 0 and alist[j] > key:
-                alist[j+1] = alist[j]
+            key = arr[i]
+            while j >= 0 and arr[j] > key:
+                arr[j+1] = arr[j]
                 j = j - 1
-            alist[j+1] = key
-        return alist
-            
-        
-
+            arr[j+1] = key
+        return arr
+       
 
 
 
