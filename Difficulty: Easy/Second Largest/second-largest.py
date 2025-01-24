@@ -2,7 +2,18 @@
 class Solution:
     def getSecondLargest(self, arr):
         # Code Here
-        # Better approach
+        f_large = arr[0]
+        for i in range(1,len(arr)):
+            if arr[i] > f_large:
+                f_large = arr[i]
+                
+        s_large = -1
+        for i in range(len(arr)):
+            if arr[i] > s_large and arr[i] != f_large:
+                s_large = arr[i]
+        return s_large
+        
+         # Better approach
                                                                                                                                                                                                    
         # f_largest = arr[0]
         # for i in range(1,len(arr)):
@@ -17,28 +28,16 @@ class Solution:
         
         # Optimal aproach
         
-        flargest = arr[0]
-        slargest = -1
-        for i in range(1,len(arr)):
-            if arr[i] > flargest:
-                slargest = flargest
-                flargest = arr[i]
-            elif arr[i] < flargest and arr[i] > slargest:
-                slargest = arr[i]
-        return slargest
+        # flargest = arr[0]
+        # slargest = -1
+        # for i in range(1,len(arr)):
+        #     if arr[i] > flargest:
+        #         slargest = flargest
+        #         flargest = arr[i]
+        #     elif arr[i] < flargest and arr[i] > slargest:
+        #         slargest = arr[i]
+        # return slargest
         
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #{ 
